@@ -1,6 +1,7 @@
 package com.uzabase.java8.sample;
 
 import static java.util.Arrays.*;
+import static java.util.stream.Collectors.*;
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
 
@@ -11,6 +12,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
@@ -18,8 +20,13 @@ import org.junit.Test;
 import org.junit.experimental.runners.Enclosed;
 import org.junit.runner.RunWith;
 
+import com.google.common.base.Function;
+import com.google.common.base.Predicate;
+import com.google.common.collect.FluentIterable;
+import com.google.common.collect.ImmutableList;
+
 @RunWith(Enclosed.class)
-public class Java8Test {
+public class Java8_1Test {
 
 	public static class StringTest {
 		@Test
